@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+class Kaartje extends StatelessWidget {
+  String kaartTitle = '';
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+        side:
+            BorderSide(color: Colors.black, width: 2, style: BorderStyle.solid),
+      ),
+      child: SizedBox(
+        height: 400,
+        width: 300,
+        child: Column(
+          children: [
+            Image(
+              image: AssetImage('images/kermit.png'),
+              width: double.infinity,
+            ),
+            SizedBox(
+              height: 20.0,
+              width: double.infinity,
+              child: Divider(
+                color: Colors.grey,
+                thickness: 2.0,
+              ),
+            ),
+            Text(kaartTitle)
+          ],
+        ),
+      ),
+    );
+  }
+}

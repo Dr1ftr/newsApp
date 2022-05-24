@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,37 +19,7 @@ class MyApp extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            children: [
-              Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(
-                        color: Colors.black,
-                        width: 2,
-                        style: BorderStyle.solid)),
-                child: SizedBox(
-                  height: 400,
-                  width: 300,
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('images/kermit.png'),
-                        width: double.infinity,
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                        width: double.infinity,
-                        child: Divider(
-                          color: Colors.grey,
-                          thickness: 2.0,
-                        ),
-                      ),
-                      Text('yeah boi')
-                    ],
-                  ),
-                ),
-              )
-            ],
+            children: [Kaartje()],
           ),
         ),
       ),

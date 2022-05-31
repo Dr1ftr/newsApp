@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Kaartje extends StatelessWidget {
-  String kaartTitle = '';
+class customCard extends StatelessWidget {
+  String kaartTitle;
+  customCard(this.kaartTitle);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -11,12 +13,12 @@ class Kaartje extends StatelessWidget {
             BorderSide(color: Colors.black, width: 2, style: BorderStyle.solid),
       ),
       child: SizedBox(
-        height: 400,
-        width: 300,
+        height: 200,
+        width: 150,
         child: Column(
           children: [
             Image(
-              image: AssetImage('images/kermit.png'),
+              image: AssetImage('images/news.png'),
               width: double.infinity,
             ),
             SizedBox(
